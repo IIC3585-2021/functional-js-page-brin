@@ -36,6 +36,7 @@ const playGame = (players) => {
 
   console.log("Juego terminado!")
   console.log(`Ha ganado: ${winners(players).slice(0, -1).reduce((acc, cur) => acc += `${cur[0]}, `, '').slice(0, -2)}${winners(players).length > 1 ? ' y ' : ''}${winners(players).slice(-1)[0][0]}`)
+}
 
 const winners = (players) => {
   return Object.entries(players).filter(cur => cur[1] === 0)
